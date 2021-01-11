@@ -2,12 +2,22 @@ body{
     margin: 0;
     justify-content: center;
     place-content: center;
+    background: linear-gradient(to right, #ef3b36, #eeeeee);
 }
 main{
     width: 900px;
     max-width: 90%;
     margin: 0 auto;
 }
+article{
+    padding: 10px;
+    margin:20px;
+    /* border: 1px solid red; */
+   border-radius: 10px;
+   box-shadow:5px 3px rgb(173, 152, 169);
+    background-color:white;
+}
+ 
 .element {
     display: flex;
     flex-wrap: wrap;
@@ -21,6 +31,9 @@ main{
     /* border: 10px solid red; */
     /* justify-content: center; */
     place-content: center;
+    padding: .2em;
+    margin: .7em;
+    text-align: center;
 }
 #top-player,#course{
    grid-template-columns: repeat(3,1fr);
@@ -36,7 +49,10 @@ main{
 }
 .blog img,.courses img{
     height:150px;
-    width:200px;
+    width:220px;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
 }
 a{
     text-decoration: none;
@@ -46,12 +62,62 @@ h1{
 }
 .courses h3{
    font-size: 22px;
-   line-height: 20px;
+   line-height: 24px;
 }
 .courses a{
     color: orangered;
+    display: block;
 }
 .courses a{
+    
     font-size: 10px;
     line-height: 12px;
+
+}
+.filled{
+    color: goldenrod;
+    font-size: 0.8em;
+    /* background-color: goldenrod; */
+}
+.unfilled{
+    color:gray;
+     font-size: 0.8em;
+
+}
+#rating-clock{
+    display: flex !important;
+    justify-content: space-between;
+    place-items: center;
+    margin: 20px;
+    
+   /* display: inline-flex !important; */
+}
+.clock{
+    background-color: rgba(255, 165, 255,0.7);
+    padding:2px 20px;
+    border: rgba(255, 165, 255,0.7);
+    border-radius: 10px;
+}
+
+
+
+
+
+@media (max-width:980px){
+    #top-player,#course{
+        grid-template-columns: repeat(2,1fr);
+    }
+    #top-blog{
+        grid-template-columns: repeat(1,1fr); 
+    }
+}
+@media (max-width:600px){
+    #top-player,#course{
+        grid-template-columns: repeat(1,1fr);
+        place-items: center;
+    }
+    #top-blog{
+        grid-template-columns: repeat(1,1fr); 
+        place-items: center;
+    }
 }
